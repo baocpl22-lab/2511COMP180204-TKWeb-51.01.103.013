@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lễ hội Halloween 🎃</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: url('halloween/bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: "Times New Roman", serif;
+      overflow-x: hidden;
+      font-size: 24px;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      color: orange;
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+      font-size: 3.5em;
+      text-shadow: 0 0 15px black;
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { text-shadow: 0 0 5px orange; }
+      50% { text-shadow: 0 0 20px red; }
+      100% { text-shadow: 0 0 10px yellow; }
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid orange;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0 0 10px orange;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 24px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px red;
+    }
+
+    form {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      border: 2px solid orange;
+      color: white;
+      box-shadow: 0 0 15px orange;
+      font-size: 24px;
+    }
+
+    .btn-halloween {
+      background-color: orange;
+      border: none;
+      color: black;
+      font-weight: bold;
+      transition: 0.3s;
+      font-size: 24px;
+    }
+
+    .btn-halloween:hover {
+      background-color: red;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      color: #ffd27f;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+      body { font-size: 20px; }
+      .card { font-size: 20px; }
+      form { font-size: 20px; }
+      footer { font-size: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 18px; }
+      .card { font-size: 18px; }
+      form { font-size: 18px; }
+      footer { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <header>
+    <h1>🎃 Halloween Party Invitation 🎃</h1>
+    <h2>Tham gia lễ hội ma quái cùng chúng tôi!</h2>
+  </header>
+
+  <section class="container my-5" style="position:relative; z-index:2;">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <a href="history.html" style="text-decoration:none;">
+          <div class="card p-3">
+            <img src="halloween/Iconcreme-Halloween-Pumpkin.512.png" class="img-fluid mx-auto" style="width:90px;">
+            <h4 class="mt-3">🎃 Giới thiệu</h4>
+            <p>Lễ hội Halloween là dịp hóa trang, chia sẻ niềm vui và những điều kỳ bí.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <a href="gallery.html" style="text-decoration:none;">
+          <div class="card p-3">
+            <img src="halloween/Iconcreme-Halloween-Bat.512.png" class="img-fluid mx-auto" style="width:90px;">
+            <h4 class="mt-3">🧙‍♀️ Hoạt động</h4>
+            <p>Khám phá những trò chơi và màn biểu diễn rùng rợn đầy thú vị!</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <a href="join.html" style="text-decoration:none;">
+          <div class="card p-3">
+            <img src="halloween/Iconcreme-Halloween-Cat.512.png" class="img-fluid mx-auto" style="width:90px;">
+            <h4 class="mt-3">👻 Tham gia</h4>
+            <p>Nhấn vào đây để xác nhận đăng ký tham gia lễ hội!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4 text-center">
+      <div class="col-md-5 mb-4">
+        <a href="shop.html" style="text-decoration:none;">
+          <div class="card p-3">
+            <img src="halloween/Iconcreme-Halloween-Home.512.png" class="img-fluid mx-auto" style="width:90px;">
+            <h4 class="mt-3">🏪 Gian hàng sản phẩm</h4>
+            <p>Tại đây, bạn có thể tìm thấy những món đồ hóa trang độc đáo, bí ngô rực rỡ và quà lưu niệm đậm chất Halloween!</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-5 mb-4">
+        <a href="members.html" style="text-decoration:none;">
+          <div class="card p-3">
+            <img src="halloween/Iconcreme-Halloween-Mummy.512.png" class="img-fluid mx-auto" style="width:90px;">
+            <h4 class="mt-3">🧑‍🤝‍🧑 Thành viên nhóm</h4>
+            <p>Những linh hồn đứng sau buổi lễ rùng rợn này! Cảm ơn nhóm tổ chức đã mang đến không khí đầy ma mị.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <h3 class="text-center" style="color:orange;">Form Liên hệ</h3>
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Tên của bạn:</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Lời nhắn:</label>
+            <textarea id="message" class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-halloween w-100">Gửi thông tin</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>✨ Design by Gia Bao ✨</footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#contactForm').submit(e => {
+      e.preventDefault();
+      alert('Cảm ơn bạn đã liên hệ! 🎃');
+      $('#contactForm')[0].reset();
+    });
+  </script>
+</body>
+</html>

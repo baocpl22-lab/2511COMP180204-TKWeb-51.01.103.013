@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu sản phẩm - FIT-HCMUE Shop</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #1a1a1a !important;
+    }
+    .brand-text {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: -5px;
+    }
+    .hero-img {
+      width: 150px;
+      max-width: 70%;
+    }
+    .product-img {
+      border-radius: 8px;
+      width: 100%;
+      max-width: 350px;
+    }
+    .product-section {
+      margin-bottom: 60px;
+    }
+    .product-name {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #777;
+    }
+
+    .search-container input {
+      width: 180px;
+      transition: width 0.3s ease;
+    }
+
+    .search-container button {
+      white-space: nowrap;
+      min-width: 90px;
+    }
+
+    .wide-search input {
+      width: 200px !important;
+    }
+    .hero-img {
+      width: 150px;
+      max-width: 70%;
+    }
+    #search {
+      background-color: #e8f5e9;
+      border: 1px solid #28a745;
+      color: #1a1a1a;
+      min-width: 170px;
+    }
+
+    #search::placeholder {
+      color: #555;
+    }
+
+    #searchBtn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+    }
+
+    #searchBtn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-3 d-flex justify-content-between align-items-center flex-wrap">
+    <div>
+      <h1 class="navbar-brand mb-0">FIT-HCMUE Shop</h1>
+      <h4 class="brand-text" id="slogan">Bring knowledge to everyone</h4>
+    </div>
+    <img src="layout/fit.png" alt="Learning illustration" class="hero-img">
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="giới thiệu.html" id="navAbout">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="sản phẩm.html" id="navProduct">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="navContact">Liên hệ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="navFAQ">Hỏi đáp</a></li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <input class="form-control me-2" id="search" type="search" placeholder="Tìm kiếm">
+          <button class="btn btn-outline-success me-2" id="searchBtn">Tìm</button>
+          <img src="https://flagcdn.com/24x18/vn.png" id="flagVN" class="flag me-2" title="Tiếng Việt">
+          <img src="https://flagcdn.com/24x18/gb.png" id="flagEN" class="flag" title="English">
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+
+    <div class="row product-section align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="layout/ip.jpg" class="product-img">
+      </div>
+      <div class="col-md-8">
+        <h3 class="product-name" id="iphoneTitle">iPhone 17 Pro Max - 256GB</h3>
+        <ul id="iphoneDesc">
+          <li>Khung titan cứng cáp, mặt lưng kính mờ cao cấp.</li>
+          <li>Màn hình Super Retina XDR OLED 6.9 inch, 120Hz.</li>
+          <li>Chip Apple A19 Bionic hiệu năng cực cao.</li>
+          <li>Camera 48MP quay 8K chuyên nghiệp.</li>
+          <li>Thời lượng pin 36 giờ liên tục.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row product-section align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="layout/lenovo.jpg" class="product-img">
+      </div>
+      <div class="col-md-8">
+        <h3 class="product-name" id="lenovoTitle">Lenovo Legion 5 (2025 Edition)</h3>
+        <ul id="lenovoDesc">
+          <li>Trang bị CPU AMD Ryzen 9 7945HX mạnh mẽ.</li>
+          <li>GPU NVIDIA RTX 4070 cho hiệu năng gaming đỉnh cao.</li>
+          <li>Màn hình 16 inch QHD+ 240Hz, 100% sRGB.</li>
+          <li>Bàn phím RGB 4 vùng với hành trình phím sâu.</li>
+          <li>Hệ thống tản nhiệt Coldfront 5.0 giúp máy luôn mát mẻ.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row product-section align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="layout/ipad.jpg" class="product-img">
+      </div>
+      <div class="col-md-8">
+        <h3 class="product-name" id="ipadTitle">iPad Pro M4 - 13 inch</h3>
+        <ul id="ipadDesc">
+          <li>Chip Apple M4 cho hiệu năng vượt trội.</li>
+          <li>Màn hình Ultra Retina XDR 13 inch, độ sáng 1600 nits.</li>
+          <li>Thiết kế siêu mỏng nhẹ, pin dùng cả ngày.</li>
+          <li>Hỗ trợ Apple Pencil Pro và Magic Keyboard mới.</li>
+          <li>Phù hợp cho dân sáng tạo, thiết kế chuyên nghiệp.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 FIT-HCMUE Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const flagEN = document.getElementById("flagEN");
+    const flagVN = document.getElementById("flagVN");
+    const searchBox = document.getElementById("searchBox");
+
+    flagEN.onclick = () => {
+      searchBox.classList.remove("wide-search");
+      document.getElementById("slogan").textContent = "Bring knowledge to everyone";
+      document.getElementById("navHome").textContent = "Home";
+      document.getElementById("navAbout").textContent = "About";
+      document.getElementById("navProduct").textContent = "Products";
+      document.getElementById("navContact").textContent = "Contact";
+      document.getElementById("navFAQ").textContent = "FAQ";
+      document.getElementById("searchBtn").textContent = "Search";
+
+      document.getElementById("iphoneTitle").textContent = "iPhone 17 Pro Max - 256GB";
+      document.getElementById("iphoneDesc").innerHTML = `
+        <li>Titanium frame with frosted glass back.</li>
+        <li>6.9-inch Super Retina XDR OLED, 120Hz refresh rate.</li>
+        <li>Apple A19 Bionic chip with top-tier performance.</li>
+        <li>48MP 8K video recording camera system.</li>
+        <li>36-hour battery life for extended use.</li>
+      `;
+
+      document.getElementById("lenovoTitle").textContent = "Lenovo Legion 5 (2025 Edition)";
+      document.getElementById("lenovoDesc").innerHTML = `
+        <li>Powered by AMD Ryzen 9 7945HX processor.</li>
+        <li>Equipped with NVIDIA RTX 4070 GPU for smooth gaming.</li>
+        <li>16-inch QHD+ 240Hz display, 100% sRGB color gamut.</li>
+        <li>4-zone RGB backlit keyboard with deep key travel.</li>
+        <li>Coldfront 5.0 cooling keeps performance stable.</li>
+      `;
+
+      document.getElementById("ipadTitle").textContent = "iPad Pro M4 - 13 inch";
+      document.getElementById("ipadDesc").innerHTML = `
+        <li>Powered by Apple M4 chip for extreme performance.</li>
+        <li>13-inch Ultra Retina XDR display, 1600 nits brightness.</li>
+        <li>Ultra-thin design, all-day battery life.</li>
+        <li>Supports Apple Pencil Pro and new Magic Keyboard.</li>
+        <li>Perfect for creative and professional users.</li>
+      `;
+    };
+
+    flagVN.onclick = () => {
+      searchBox.classList.add("wide-search");
+      document.getElementById("slogan").textContent = "Mang tri thức đến với mọi người";
+      document.getElementById("navHome").textContent = "Trang chủ";
+      document.getElementById("navAbout").textContent = "Giới thiệu";
+      document.getElementById("navProduct").textContent = "Sản phẩm";
+      document.getElementById("navContact").textContent = "Liên hệ";
+      document.getElementById("navFAQ").textContent = "Hỏi đáp";
+      document.getElementById("searchBtn").textContent = "Tìm kiếm";
+
+      document.getElementById("iphoneTitle").textContent = "iPhone 17 Pro Max - 256GB";
+      document.getElementById("iphoneDesc").innerHTML = `
+        <li>Khung titan cứng cáp, mặt lưng kính mờ cao cấp.</li>
+        <li>Màn hình Super Retina XDR OLED 6.9 inch, 120Hz.</li>
+        <li>Chip Apple A19 Bionic hiệu năng cực cao.</li>
+        <li>Camera 48MP quay 8K chuyên nghiệp.</li>
+        <li>Thời lượng pin 36 giờ liên tục.</li>
+      `;
+
+      document.getElementById("lenovoTitle").textContent = "Lenovo Legion 5 (2025 Edition)";
+      document.getElementById("lenovoDesc").innerHTML = `
+        <li>Trang bị CPU AMD Ryzen 9 7945HX mạnh mẽ.</li>
+        <li>GPU NVIDIA RTX 4070 cho hiệu năng gaming đỉnh cao.</li>
+        <li>Màn hình 16 inch QHD+ 240Hz, 100% sRGB.</li>
+        <li>Bàn phím RGB 4 vùng với hành trình phím sâu.</li>
+        <li>Hệ thống tản nhiệt Coldfront 5.0 giúp máy luôn mát mẻ.</li>
+      `;
+
+      document.getElementById("ipadTitle").textContent = "iPad Pro M4 - 13 inch";
+      document.getElementById("ipadDesc").innerHTML = `
+        <li>Chip Apple M4 cho hiệu năng vượt trội.</li>
+        <li>Màn hình Ultra Retina XDR 13 inch, độ sáng 1600 nits.</li>
+        <li>Thiết kế siêu mỏng nhẹ, pin dùng cả ngày.</li>
+        <li>Hỗ trợ Apple Pencil Pro và Magic Keyboard mới.</li>
+        <li>Phù hợp cho dân sáng tạo, thiết kế chuyên nghiệp.</li>
+      `;
+    };
+    const searchInput = document.getElementById("search");
+    const searchBtn = document.getElementById("searchBtn");
+    const products = document.querySelectorAll(".product-section");
+
+    function searchProducts() {
+      const keyword = searchInput.value.trim().toLowerCase();
+      products.forEach(section => {
+        const name = section.querySelector(".product-name").textContent.toLowerCase();
+        section.style.display = !keyword || name.includes(keyword) ? "flex" : "none";
+      });
+    }
+
+    searchBtn.addEventListener("click", searchProducts);
+    searchInput.addEventListener("keypress", e => { if(e.key==="Enter") searchProducts(); });
+    searchInput.addEventListener("input", function(){ if(!this.value.trim()) searchProducts(); });
+       changeLanguage("vi");
+
+    document.getElementById("flagEN").addEventListener("click", () => changeLanguage("en"));
+    document.getElementById("flagVN").addEventListener("click", () => changeLanguage("vi"));
+  </script>
+</body>
+</html>

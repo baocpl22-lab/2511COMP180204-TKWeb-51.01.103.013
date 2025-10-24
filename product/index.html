@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý sản phẩm</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+      color:#ec0b0b
+    }
+    button {
+      padding: 8px 12px;
+      margin-bottom: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    .action-btn {
+      margin-right: 5px;
+      padding: 6px 10px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .delete-btn {
+      background-color: #f44336;
+    }
+    tfoot td {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quản lý sản phẩm</h1>
+  <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." onkeyup="searchProduct()">
+  <button onclick="addProduct()">Thêm sản phẩm mới</button>
+
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>Tên sản phẩm</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>iPhone 14</td><td><button class="action-btn" onclick="editProduct(this)">Sửa</button><button class="action-btn delete-btn" onclick="deleteProduct(this)">Xóa</button></td></tr>
+      <tr><td>Samsung Galaxy S22</td><td><button class="action-btn" onclick="editProduct(this)">Sửa</button><button class="action-btn delete-btn" onclick="deleteProduct(this)">Xóa</button></td></tr>
+      <tr><td>Xiaomi Mi 11</td><td><button class="action-btn" onclick="editProduct(this)">Sửa</button><button class="action-btn delete-btn" onclick="deleteProduct(this)">Xóa</button></td></tr>
+      <tr><td>Oppo Reno6</td><td><button class="action-btn" onclick="editProduct(this)">Sửa</button><button class="action-btn delete-btn" onclick="deleteProduct(this)">Xóa</button></td></tr>
+      <tr><td>Vivo V21</td><td><button class="action-btn" onclick="editProduct(this)">Sửa</button><button class="action-btn delete-btn" onclick="deleteProduct(this)">Xóa</button></td></tr>
+      <tr><td>Realme GT Master</td><td><button class="action-btn" onclick="editProduct(this)">Sửa</button><button class="action-btn delete-btn" onclick="deleteProduct(this)">Xóa</button></td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2" id="totalCount" style="text-align: right; font-weight: bold;">
+          Tổng số sản phẩm: 6
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script>
+    function updateTotalCount() {
+      const rows = document.querySelectorAll("#productTable tbody tr");
+      const visibleRows = Array.from(rows).filter(row => row.style.display !== "none");
+      document.getElementById("totalCount").textContent = "Tổng số sản phẩm: " + visibleRows.length;
+    }
+
+    function addProduct() {
+      const name = prompt("Nhập tên sản phẩm mới:");
+      if (name) {
+        const table = document.getElementById("productTable").getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+        const nameCell = newRow.insertCell(0);
+        const actionCell = newRow.insertCell(1);
+        nameCell.textContent = name;
+        actionCell.innerHTML = `
+          <button class="action-btn" onclick="editProduct(this)">Sửa</button>
+          <button class="action-btn delete-btn" onclick="deleteProduct(this)">Xóa</button>
+        `;
+        updateTotalCount();
+      }
+    }
+
+    function editProduct(btn) {
+      const row = btn.parentElement.parentElement;
+      const currentName = row.cells[0].textContent;
+      const newName = prompt("Sửa tên sản phẩm:", currentName);
+      if (newName) {
+        row.cells[0].textContent = newName;
+      }
+    }
+
+    function deleteProduct(btn) {
+      const row = btn.parentElement.parentElement;
+      if (confirm("Bạn có chắc muốn xóa sản phẩm này?")) {
+        row.remove();
+        updateTotalCount();
+      }
+    }
+
+    function searchProduct() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll("#productTable tbody tr");
+
+      rows.forEach(row => {
+        const productName = row.cells[0].textContent.toLowerCase();
+        row.style.display = productName.includes(input) ? "" : "none";
+      });
+      updateTotalCount();
+    }
+
+    window.onload = updateTotalCount;
+  </script>
+
+</body>
+</html>
